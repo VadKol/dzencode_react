@@ -2,24 +2,18 @@ import { FC } from "react";
 
 import { TopMenu } from "@components/TopMenu";
 import { Logo } from "@components/Logo";
-import { SessionCounter } from '@components/SessionCounter/SessionCounter'
+import { SearchFrom } from '@components/SearchForm';
+
+import styles from '@components/Header/Header.module.scss';
 
 export const Header: FC = () => {
   return (
-    <header>
+    <header className={styles.header}>
       <Logo />
 
-      <form>
-        <input
-          type="text"
-          placeholder="Search product"
-        />
-      </form>
+      <SearchFrom />
 
-      <div>
-        <TopMenu />
-        <SessionCounter />
-      </div>
+      <TopMenu />
     </header>
   );
 };

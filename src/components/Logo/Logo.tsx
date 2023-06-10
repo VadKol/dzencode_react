@@ -4,10 +4,6 @@ import Logotype from '@assets/images/Logo.png';
 
 import styles from '@components/Logo/Logo.module.scss';
 
-// interface Props {
-
-// }
-
 export const Logo: FC = () => (
   <div className={styles.logo}>
     <img
