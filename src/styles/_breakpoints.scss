@@ -1,0 +1,38 @@
+@import '@styles/variables';
+
+@mixin bp-small-up {
+  @media only screen and (min-width: $bp-480) {
+    @content;
+  }
+}
+
+@mixin bp-medium-up {
+  @media only screen and (min-width: $bp-768) {
+    @content;
+  }
+}
+
+@mixin bp-large-up {
+  @media only screen and (min-width: $bp-1024) {
+    @content;
+  }
+}
+
+@mixin bp-x-large-up {
+  @media only screen and (min-width: $bp-1200) {
+    @content;
+  }
+}
+
+// Custom breakpoints
+@mixin bp-custom-up($size) {
+  @media only screen and (min-width: $size) {
+    @content;
+  }
+}
+
+@mixin bp-custom-down($size) {
+  @media only screen and (max-width: $size) {
+    @content;
+  }
+}

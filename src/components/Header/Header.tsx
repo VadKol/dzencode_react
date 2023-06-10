@@ -8,6 +8,7 @@ export const Header: FC = () => {
   return (
     <header>
       <Logo />
+
       <form>
         <input
           type="text"
@@ -15,8 +16,10 @@ export const Header: FC = () => {
         />
       </form>
 
-      <TopMenu />
-      <SessionCounter />
+      <div>
+        <TopMenu />
+        <SessionCounter />
+      </div>
     </header>
   );
 };

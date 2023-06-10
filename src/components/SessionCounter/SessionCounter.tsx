@@ -25,8 +25,6 @@ export const SessionCounter: FC = () => {
   }, []);
 
   return (
-    <div>
-      <h1>Sessions: {activeSessions}</h1>
-    </div>
+    <p>Sessions: {activeSessions}</p>
   );
 };

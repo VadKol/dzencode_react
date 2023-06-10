@@ -1,0 +1,16 @@
+@import '@styles/mixins';
+
+.logo {
+  display: flex;
+  align-items: center;
+
+  &__image {
+    @include square(50px);
+  }
+
+  &__text {
+    text-transform: uppercase;
+    font-weight: 800;
+    color: #87c234;
+  }
+}
