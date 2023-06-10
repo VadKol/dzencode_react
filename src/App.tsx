@@ -1,13 +1,13 @@
 import { FC } from 'react';
 
-import { Header } from './components/Header';
-import { Sidebar } from '@components/Sidebar';
+import { BrowserRouter } from 'react-router-dom';
+
+import { MainLayout } from '@/layouts/MainLayout';
 
 export const App: FC = () => {
   return (
-    <>
-      <Header />
-      <Sidebar />
-    </>
+    <BrowserRouter>
+      <MainLayout />
+    </BrowserRouter>
   );
 };
