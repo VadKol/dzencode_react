@@ -1,8 +1,13 @@
 .header {
+  position: absolute;
   padding: 0 2rem; //todo: make container
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  width: 100%;
+
+  background: #fff;
 
   box-shadow: 0 15px 30px 0 #e8eceeae;
 }

@@ -1,10 +1,13 @@
-import { Header } from './components/Header';
+import { FC } from 'react';
 
-export const App = () => {
+import { Header } from './components/Header';
+import { Sidebar } from '@components/Sidebar';
+
+export const App: FC = () => {
   return (
     <>
       <Header />
-      <h1>Hello, World!</h1>
+      <Sidebar />
     </>
   );
 };
