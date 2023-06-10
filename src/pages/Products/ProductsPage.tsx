@@ -2,8 +2,11 @@ import { FC } from "react";
 
 export const ProductsPage: FC = () => {
   return (
-    <h1>
-      ProductsPage
-    </h1>
+    <section>
+      <h1>
+        Products
+      </h1>
+    </section>
+
   );
 }

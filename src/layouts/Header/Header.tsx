@@ -4,7 +4,7 @@ import { TopMenu } from "@components/TopMenu";
 import { Logo } from "@components/Logo";
 import { SearchFrom } from '@components/SearchForm';
 
-import styles from '@components/Header/Header.module.scss';
+import styles from '@layouts/Header/Header.module.scss';
 
 export const Header: FC = () => {
   return (
