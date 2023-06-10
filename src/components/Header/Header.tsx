@@ -1,4 +1,5 @@
 import { FC } from "react";
+import { TopMenu } from "../TopMenu/TopMenu";
 
 export const Header: FC = () => {
   return (
@@ -8,7 +9,7 @@ export const Header: FC = () => {
         type="text"
         placeholder="Search product"
       />
-      TopMenu
+      <TopMenu />
     </header>
   );
 };
