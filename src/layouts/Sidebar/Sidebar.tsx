@@ -1,6 +1,6 @@
 import { FC } from "react";
 
-import { Navbar } from '@components/Navbar';
+import { Navbar } from '@/components/SidebarComponents/Navbar';
 
 import styles from '@layouts/Sidebar/Sidebar.module.scss';
 

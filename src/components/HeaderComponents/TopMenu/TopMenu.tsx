@@ -1,9 +1,9 @@
 import { FC, useEffect, useState } from 'react';
 import moment from 'moment';
 
-import { SessionCounter } from '@components/SessionCounter';
+import { SessionCounter } from '@/components/HeaderComponents/SessionCounter';
 
-import styles from '@components/TopMenu/TopMenu.module.scss';
+import styles from '@components/HeaderComponents/TopMenu/TopMenu.module.scss';
 
 export const TopMenu: FC = () => {
   const [currentTime, setCurrentTime] = useState(new Date());
