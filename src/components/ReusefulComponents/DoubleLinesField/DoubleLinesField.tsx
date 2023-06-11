@@ -4,8 +4,8 @@ interface DouleLineFieldProps {
   doubleLineFieldClass: string;
   topLineClass: string;
   bottomLineClass: string;
-  topLine: string;
-  bottomLine: string;
+  topLine: string | number;
+  bottomLine: string | number;
 }
 
 export const DouleLineField: FC<DouleLineFieldProps> = ({
