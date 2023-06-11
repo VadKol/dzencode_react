@@ -1,5 +1,7 @@
 import { FC } from 'react';
 
+import { SvgElement } from '@components/ReusefulComponents/SvgElement';
+
 interface ButtonIconProps {
   buttonClass: string;
   buttonHandle?: () => void;
@@ -18,8 +20,6 @@ export const ButtonIcon: FC<ButtonIconProps> = ({
     type="button"
     onClick={buttonHandle}
   >
-    <svg className={iconClass}>
-      <use href={iconHref}></use>
-    </svg>
+    <SvgElement svgClass={iconClass} svgHref={iconHref} />
   </button>
 );

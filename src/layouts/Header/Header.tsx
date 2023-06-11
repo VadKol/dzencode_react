@@ -1,8 +1,8 @@
 import { FC } from "react";
 
-import { TopMenu } from "@components/TopMenu";
-import { Logo } from "@components/Logo";
-import { SearchFrom } from '@components/SearchForm';
+import { TopMenu } from "@/components/HeaderComponents/TopMenu";
+import { Logo } from "@/components/HeaderComponents/Logo";
+import { SearchFrom } from '@/components/HeaderComponents/SearchForm';
 
 import styles from '@layouts/Header/Header.module.scss';
 

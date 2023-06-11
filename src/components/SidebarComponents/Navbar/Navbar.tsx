@@ -1,8 +1,8 @@
 import { FC } from "react";
 
-import { NavItem } from '@components/NavItem';
+import { NavItem } from '@/components/SidebarComponents/NavItem';
 
-import styles from '@components/Navbar/Navbar.module.scss'
+import styles from '@components/SidebarComponents/Navbar/Navbar.module.scss'
 
 export const Navbar: FC = () => {
   return (

@@ -7,8 +7,6 @@ export const SearchFrom: FC = () => {
       label="Search..."
       variant="outlined"
       size="small"
-      // value={searchTerm}
-      // onChange={handleSearch}
     />
   );
 }
