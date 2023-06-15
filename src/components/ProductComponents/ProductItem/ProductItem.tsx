@@ -2,9 +2,9 @@ import { FC } from 'react';
 
 import { ButtonIcon } from '@/components/ReusefulComponents/ButtonIcon';
 import { DouleLineField } from '@/components/ReusefulComponents/DoubleLinesField';
+import iconDelete from '@assets/icons/bin.svg';
 import { OneLineField } from '@components/ReusefulComponents/OneLineField';
-import styles from './ProductItem.module.scss'
-import iconDelete from '@assets/icons/bin.svg'
+import styles from './ProductItem.module.scss';
 
 interface ProductItemProps {
   productTitle: string;
@@ -39,39 +39,20 @@ export const ProductItem: FC<ProductItemProps> = ({
 
       <DouleLineField
         doubleLineFieldClass={styles.product__title}
-        topLineClass={''}
         bottomLineClass={styles.product__title__bottom}
         topLine={productTitle}
         bottomLine={serialNum}
       />
 
-      <DouleLineField
-        doubleLineFieldClass={''}
-        topLineClass={''}
-        bottomLineClass={''}
-        topLine={guaranteeStart}
-        bottomLine={guaranteeEnd}
-      />
+      <DouleLineField topLine={guaranteeStart} bottomLine={guaranteeEnd} />
 
-      <OneLineField oneLineClass={''} oneLineContent={condition} />
+      <OneLineField oneLineContent={condition} />
 
-      <DouleLineField
-        doubleLineFieldClass={''}
-        topLineClass={''}
-        bottomLineClass={''}
-        topLine={priceInDollars}
-        bottomLine={priceInHryvnas}
-      />
+      <DouleLineField topLine={priceInDollars} bottomLine={priceInHryvnas} />
 
-      <OneLineField oneLineClass={''} oneLineContent={orderName} />
+      <OneLineField oneLineContent={orderName} />
 
-      <DouleLineField
-        doubleLineFieldClass={''}
-        topLineClass={''}
-        bottomLineClass={''}
-        topLine={shortDate}
-        bottomLine={longDate}
-      />
+      <DouleLineField topLine={shortDate} bottomLine={longDate} />
 
       <ButtonIcon
         buttonClass={styles.product__btn}

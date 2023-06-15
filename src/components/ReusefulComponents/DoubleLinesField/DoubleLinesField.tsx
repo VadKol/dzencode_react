@@ -1,9 +1,9 @@
 import { FC } from "react";
 
 interface DouleLineFieldProps {
-  doubleLineFieldClass: string;
-  topLineClass: string;
-  bottomLineClass: string;
+  doubleLineFieldClass?: string;
+  topLineClass?: string;
+  bottomLineClass?: string;
   topLine: string | number;
   bottomLine: string | number;
 }

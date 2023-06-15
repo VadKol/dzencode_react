@@ -4,8 +4,8 @@ import { ButtonIcon } from '@/components/ReusefulComponents/ButtonIcon';
 import { DouleLineField } from '@/components/ReusefulComponents/DoubleLinesField';
 import { OneLineField } from '@components/ReusefulComponents/OneLineField';
 
-import iconMenu from '@assets/icons/menu.svg';
 import iconDelete from '@assets/icons/bin.svg';
+import iconMenu from '@assets/icons/menu.svg';
 
 import styles from './OrderItem.module.scss';
 
@@ -28,11 +28,15 @@ export const OrderItem: FC<ProductItemProps> = ({
   sumInHryvnas,
   handleDeleteButton,
 }) => (
-  <li className= {styles.order__item}>
+  <li className={styles.order__item}>
     <article className={styles.order}>
       <OneLineField oneLineClass={styles.title} oneLineContent={orderTitle} />
 
-      <ButtonIcon buttonClass={styles.order__btn} iconClass={styles.order__icon} iconHref={iconMenu} />
+      <ButtonIcon
+        buttonClass={styles.order__btn}
+        iconClass={styles.order__icon}
+        iconHref={iconMenu}
+      />
 
       <DouleLineField
         doubleLineFieldClass={styles.title}

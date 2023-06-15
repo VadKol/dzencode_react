@@ -1,17 +1,21 @@
 import { deleteOrder } from '@/redux/orderReducer';
-import React from 'react';
+import { Product } from '@/types/Product';
+import { FC } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { OrderTotal, calculateOrderTotal } from '../../../helpers';
 import { RootState } from '../../../redux/rootReducer';
 import { Order } from '../../../types/Order';
-import { Product } from '@/types/Product';
 import { OrderItem } from '../OrderItem';
-import { calculateOrderTotal, OrderTotal } from '../../../helpers';
 
-import styles from './OrderList.module.scss'
+import styles from './OrderList.module.scss';
 
-export const OrdersList: React.FC = () => {
-  const orders: Order[] = useSelector((state: RootState) => state.orders.orders);
-  const products: Product[] = useSelector((state: RootState) => state.products.products);
+export const OrdersList: FC = () => {
+  const orders: Order[] = useSelector(
+    (state: RootState) => state.orders.orders,
+  );
+  const products: Product[] = useSelector(
+    (state: RootState) => state.products.products,
+  );
 
   const dispatch = useDispatch();
 
@@ -20,7 +24,7 @@ export const OrdersList: React.FC = () => {
   };
 
   return (
-    <ul className= {styles.orderList}>
+    <ul className={styles.orderList}>
       {orders.map(order => {
         const orderTotal: OrderTotal = calculateOrderTotal(order, products);
 

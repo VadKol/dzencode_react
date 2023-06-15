@@ -1,9 +1,9 @@
 import { Product } from '@/types/Product';
 import { FC } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { deleteProduct } from '../../../redux/productReducer';
 import { RootState } from '../../../redux/rootReducer';
 import { ProductItem } from '../ProductItem';
-import { deleteProduct } from '../../../redux/productReducer';
 import styles from './ProductList.module.scss';
 
 export const ProductList: FC = () => {
@@ -28,7 +28,12 @@ export const ProductList: FC = () => {
           guaranteeEnd={`To ${product.guarantee.end}`}
           priceInDollars={`${product.price[0].value} ${product.price[0].symbol}`}
           priceInHryvnas={`${product.price[1].value} ${product.price[1].symbol}`}
-          shortDate={product.date.split(' ')[0].split('-').slice(1).reverse().join('/')}
+          shortDate={product.date
+            .split(' ')[0]
+            .split('-')
+            .slice(1)
+            .reverse()
+            .join('/')}
           longDate={product.date.split(' ')[0].split('-').reverse().join('/')}
           condition={product.isNew ? 'New' : 'Old'}
           orderName={`Order ${product.order}`}

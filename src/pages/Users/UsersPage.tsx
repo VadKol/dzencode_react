@@ -1,9 +1,5 @@
-import { FC } from "react";
+import { FC } from 'react';
 
 export const UsersPage: FC = () => {
-  return (
-    <h1>
-      Users
-    </h1>
-  );
-}
+  return <h1>Users</h1>;
+};

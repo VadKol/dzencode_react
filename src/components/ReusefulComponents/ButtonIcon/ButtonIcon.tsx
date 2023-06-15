@@ -13,12 +13,7 @@ export const ButtonIcon: FC<ButtonIconProps> = ({
   iconClass,
   iconHref,
 }) => (
-  <button
-    className={buttonClass}
-    type="button"
-    onClick={buttonHandle}
-  >
-
-    <img src={iconHref} className={iconClass}/>
+  <button className={buttonClass} type="button" onClick={buttonHandle}>
+    <img src={iconHref} className={iconClass} />
   </button>
 );
