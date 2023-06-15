@@ -1,7 +1,7 @@
 import { FC } from 'react';
 
 interface OneLineProps {
-  oneLineClass: string;
+  oneLineClass?: string;
   oneLineContent: string;
 }
 

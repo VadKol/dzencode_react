@@ -1,11 +1,11 @@
-import { FC } from "react";
+import { FC } from 'react';
+
+import { OrdersList } from '@components/OrderComponents/OrdersList';
 
 export const OrdersPage: FC = () => {
   return (
     <section>
-      <h1>
-        Orders
-      </h1>
+      <OrdersList />
     </section>
   );
-}
+};

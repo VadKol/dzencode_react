@@ -4,85 +4,69 @@ import { ButtonIcon } from '@/components/ReusefulComponents/ButtonIcon';
 import { DouleLineField } from '@/components/ReusefulComponents/DoubleLinesField';
 import { OneLineField } from '@components/ReusefulComponents/OneLineField';
 
+import iconDelete from '@assets/icons/bin.svg';
+import iconMenu from '@assets/icons/menu.svg';
+
+import styles from './OrderItem.module.scss';
+
 interface ProductItemProps {
-  classDoubleLineField: string;
-  classOneLineField: string;
-  classTopLine: string;
-  classBottomLine: string;
-  classDetailsButton: string;
-  classIconDetails: string;
-  classDeleteButton: string;
-  classIconDelete: string;
   orderTitle: string;
-  hrefDetailsIcon: string;
   countProducts: number;
   shortDate: string;
   longDate: string;
   sumInDollars: string;
   sumInHryvnas: string;
   handleDeleteButton: () => void;
-  hrefDeleteIcon: string;
 }
 
 export const OrderItem: FC<ProductItemProps> = ({
-  classDoubleLineField,
-  classOneLineField,
-  classTopLine,
-  classBottomLine,
-  classDetailsButton,
-  classIconDetails,
-  classDeleteButton,
-  classIconDelete,
   orderTitle,
-  hrefDetailsIcon,
   countProducts,
   shortDate,
   longDate,
   sumInDollars,
   sumInHryvnas,
   handleDeleteButton,
-  hrefDeleteIcon,
 }) => (
-  <li>
-    <article>
-
-      <OneLineField oneLineClass={classOneLineField} oneLineContent={orderTitle} />
+  <li className={styles.order__item}>
+    <article className={styles.order}>
+      <OneLineField oneLineClass={styles.title} oneLineContent={orderTitle} />
 
       <ButtonIcon
-        buttonClass={classDetailsButton}
-        iconClass={classIconDetails}
-        iconHref={hrefDetailsIcon}
+        buttonClass={styles.order__btn}
+        iconClass={styles.order__icon}
+        iconHref={iconMenu}
       />
 
       <DouleLineField
-        doubleLineFieldClass={classDoubleLineField}
-        topLineClass={classTopLine}
-        bottomLineClass={classBottomLine}
+        doubleLineFieldClass={styles.title}
+        topLineClass={''}
+        bottomLineClass={''}
         topLine={countProducts}
         bottomLine={'Products'}
       />
 
       <DouleLineField
-        doubleLineFieldClass={classDoubleLineField}
-        topLineClass={classTopLine}
-        bottomLineClass={classBottomLine}
+        doubleLineFieldClass={''}
+        topLineClass={''}
+        bottomLineClass={''}
         topLine={shortDate}
         bottomLine={longDate}
       />
 
       <DouleLineField
-        doubleLineFieldClass={classDoubleLineField}
-        topLineClass={classTopLine}
-        bottomLineClass={classBottomLine}
+        doubleLineFieldClass={''}
+        topLineClass={''}
+        bottomLineClass={''}
         topLine={sumInDollars}
         bottomLine={sumInHryvnas}
       />
 
       <ButtonIcon
-        buttonClass={classDeleteButton}
+        buttonClass={styles.order__btn}
         buttonHandle={handleDeleteButton}
-        iconClass={classIconDelete}
-        iconHref={hrefDeleteIcon}
+        iconClass={styles.order__icon}
+        iconHref={iconDelete}
       />
     </article>
   </li>

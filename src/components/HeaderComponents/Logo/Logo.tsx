@@ -11,8 +11,6 @@ export const Logo: FC = () => (
       alt="Inventory Logotype"
       className={styles.logo__image}
     />
-    <p className={styles.logo__text}>
-      inventory
-    </p>
+    <p className={styles.logo__text}>inventory</p>
   </div>
 );

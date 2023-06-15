@@ -1,5 +1,5 @@
-import { FC } from 'react';
 import { PageRoutes } from '@utils/router';
+import { FC } from 'react';
 
 import { Header } from '@/layouts/Header';
 import { Sidebar } from '@/layouts/Sidebar';

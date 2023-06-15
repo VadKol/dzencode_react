@@ -1,11 +1,11 @@
 import { FC } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 
-import { OrdersPage } from '@pages/Orders';
 import { GroupsPage } from '@pages/Groups';
+import { OrdersPage } from '@pages/Orders';
 import { ProductsPage } from '@pages/Products';
-import { UsersPage } from '@pages/Users';
 import { SettingsPage } from '@pages/Settings';
+import { UsersPage } from '@pages/Users';
 
 export const PageRoutes: FC = () => (
   <Routes>

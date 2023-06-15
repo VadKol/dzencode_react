@@ -1,0 +1,40 @@
+.product {
+  display: flex;
+  width: 750px;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 10px;
+
+  &__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  &__status {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #86be47;
+    margin: 0 25px;
+  }
+
+  &__btn {
+    width: 48px;
+    height: 48px;
+    border: none;
+    background: none;
+  }
+
+  &__icon {
+    width: 1rem;
+  }
+
+  &__title {
+    padding: 10px;
+
+    &__bottom {
+      font-size: 0.5rem;
+      color: grey;
+    }
+  }
+}
