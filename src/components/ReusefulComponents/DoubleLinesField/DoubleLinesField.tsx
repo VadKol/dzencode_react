@@ -22,5 +22,5 @@ export const DouleLineField: FC<DouleLineFieldProps> = ({
     <p className={bottomLineClass}>
       {bottomLine}
     </p>
-</div>
+  </div>
 );

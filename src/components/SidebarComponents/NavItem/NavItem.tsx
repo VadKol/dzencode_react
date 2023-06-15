@@ -1,5 +1,7 @@
 import { FC } from "react";
 import { NavLink } from "react-router-dom";
+import cn from 'classnames';
+import styles from './Navitem.module.scss';
 
 interface NavItemProps {
   route: string;
@@ -9,7 +11,9 @@ interface NavItemProps {
 export const NavItem: FC<NavItemProps> = ({ route, PageTitle }) => {
   return (
     <li>
-      <NavLink to={route}>
+      <NavLink to={route} className= {({ isActive }) => (
+            cn(styles.navLink, { navLink__active: isActive })
+          )}>
         {PageTitle}
       </NavLink>
     </li>

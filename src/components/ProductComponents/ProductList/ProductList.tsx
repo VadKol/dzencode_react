@@ -1,31 +1,40 @@
+import { Product } from '@/types/Product';
 import { FC } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { RootState } from '../../../redux/rootReducer';
+import { ProductItem } from '../ProductItem';
+import { deleteProduct } from '../../../redux/productReducer';
+import styles from './ProductList.module.scss';
 
-import { ProductItem } from '@components/ProductComponents/ProductItem';
+export const ProductList: FC = () => {
+  const products: Product[] = useSelector(
+    (state: RootState) => state.products.products,
+  );
 
-export const ProductsList: FC = () => {
+  const dispatch = useDispatch();
+
+  const handleDeleteButton = (productId: number) => {
+    dispatch(deleteProduct(productId));
+  };
+
   return (
-    <ProductItem
-      classIndicator={''}
-      classDoubleLineField={''}
-      classOneLineField={''}
-      classTopLine={''}
-      classBottomLine={''}
-      classDeleteButton={''}
-      classIconDelete={''}
-      productTitle={''}
-      serialNum={''}
-      guaranteeStart={''}
-      guaranteeEnd={''}
-      priceInDollars={''}
-      priceInHryvnas={''}
-      shortDate={''}
-      longDate={''}
-      serviceStatus={''}
-      condition={''}
-      groupName={''}
-      orderName={''}
-      handleDeleteButton={() => {console.log("handle")}}
-      hrefDeleteIcon={''}
-    />
+    <ul className={styles.productList}>
+      {products.map(product => (
+        <ProductItem
+          key={product.id}
+          productTitle={product.title}
+          serialNum={String(product.serialNumber)}
+          guaranteeStart={`From ${product.guarantee.start}`}
+          guaranteeEnd={`To ${product.guarantee.end}`}
+          priceInDollars={`${product.price[0].value} ${product.price[0].symbol}`}
+          priceInHryvnas={`${product.price[1].value} ${product.price[1].symbol}`}
+          shortDate={product.date.split(' ')[0].split('-').slice(1).reverse().join('/')}
+          longDate={product.date.split(' ')[0].split('-').reverse().join('/')}
+          condition={product.isNew ? 'New' : 'Old'}
+          orderName={`Order ${product.order}`}
+          handleDeleteButton={() => handleDeleteButton(product.id)}
+        />
+      ))}
+    </ul>
   );
 };

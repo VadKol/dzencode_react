@@ -1,8 +1,10 @@
-export const products = [
+import { Product } from '../types/Product';
+
+export const products: Product[] = [
   {
     id: 1,
     serialNumber: 1234,
-    isNew: 1,
+    isNew: true,
     photo: 'pathToFile.jpg',
     title: 'Product 1',
     type: 'Monitors',
@@ -21,7 +23,7 @@ export const products = [
   {
     id: 2,
     serialNumber: 109876,
-    isNew: 1,
+    isNew: false,
     photo: 'pathToFile.jpg',
     title: 'Product 2',
     type: 'Monitors',
@@ -40,7 +42,7 @@ export const products = [
   {
     id: 3,
     serialNumber: 45678,
-    isNew: 1,
+    isNew: true,
     photo: 'pathToFile.jpg',
     title: 'Product 1',
     type: 'Monitors',

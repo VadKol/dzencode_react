@@ -24,7 +24,5 @@ export const SessionCounter: FC = () => {
     }
   }, []);
 
-  return (
-    <p>Sessions: {activeSessions}</p>
-  );
+  return <p>Sessions: {activeSessions}</p>;
 };

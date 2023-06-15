@@ -3,15 +3,10 @@ import { FC } from 'react';
 import { ButtonIcon } from '@/components/ReusefulComponents/ButtonIcon';
 import { DouleLineField } from '@/components/ReusefulComponents/DoubleLinesField';
 import { OneLineField } from '@components/ReusefulComponents/OneLineField';
+import styles from './ProductItem.module.scss'
+import iconDelete from '@assets/icons/bin.svg'
 
 interface ProductItemProps {
-  classIndicator: string;
-  classDoubleLineField: string;
-  classOneLineField: string;
-  classTopLine: string;
-  classBottomLine: string;
-  classDeleteButton: string;
-  classIconDelete: string;
   productTitle: string;
   serialNum: string;
   guaranteeStart: string;
@@ -20,22 +15,12 @@ interface ProductItemProps {
   priceInHryvnas: string;
   shortDate: string;
   longDate: string;
-  serviceStatus: string;
   condition: string;
-  groupName: string;
   orderName: string;
   handleDeleteButton: () => void;
-  hrefDeleteIcon: string;
 }
 
 export const ProductItem: FC<ProductItemProps> = ({
-  classIndicator,
-  classDoubleLineField,
-  classOneLineField,
-  classTopLine,
-  classBottomLine,
-  classDeleteButton,
-  classIconDelete,
   productTitle,
   serialNum,
   guaranteeStart,
@@ -44,62 +29,55 @@ export const ProductItem: FC<ProductItemProps> = ({
   priceInHryvnas,
   shortDate,
   longDate,
-  serviceStatus,
   condition,
-  groupName,
   orderName,
   handleDeleteButton,
-  hrefDeleteIcon,
 }) => (
-  <li>
-    <article>
-      <div className={classIndicator}></div>
+  <li className={styles.product__item}>
+    <article className={styles.product}>
+      <div className={styles.product__status}></div>
 
       <DouleLineField
-        doubleLineFieldClass={classDoubleLineField}
-        topLineClass={classTopLine}
-        bottomLineClass={classBottomLine}
+        doubleLineFieldClass={styles.product__title}
+        topLineClass={''}
+        bottomLineClass={styles.product__title__bottom}
         topLine={productTitle}
         bottomLine={serialNum}
       />
 
-      <OneLineField oneLineClass={classOneLineField} oneLineContent={serviceStatus} />
-
       <DouleLineField
-        doubleLineFieldClass={classDoubleLineField}
-        topLineClass={classTopLine}
-        bottomLineClass={classBottomLine}
+        doubleLineFieldClass={''}
+        topLineClass={''}
+        bottomLineClass={''}
         topLine={guaranteeStart}
         bottomLine={guaranteeEnd}
       />
 
-      <OneLineField oneLineClass={classOneLineField} oneLineContent={condition} />
+      <OneLineField oneLineClass={''} oneLineContent={condition} />
 
       <DouleLineField
-        doubleLineFieldClass={classDoubleLineField}
-        topLineClass={classTopLine}
-        bottomLineClass={classBottomLine}
+        doubleLineFieldClass={''}
+        topLineClass={''}
+        bottomLineClass={''}
         topLine={priceInDollars}
         bottomLine={priceInHryvnas}
       />
 
-      <OneLineField oneLineClass={classOneLineField} oneLineContent={groupName} />
-
-      <OneLineField oneLineClass={classOneLineField} oneLineContent={orderName} />
+      <OneLineField oneLineClass={''} oneLineContent={orderName} />
 
       <DouleLineField
-        doubleLineFieldClass={classDoubleLineField}
-        topLineClass={classTopLine}
-        bottomLineClass={classBottomLine}
+        doubleLineFieldClass={''}
+        topLineClass={''}
+        bottomLineClass={''}
         topLine={shortDate}
         bottomLine={longDate}
       />
 
       <ButtonIcon
-        buttonClass={classDeleteButton}
+        buttonClass={styles.product__btn}
         buttonHandle={handleDeleteButton}
-        iconClass={classIconDelete}
-        iconHref={hrefDeleteIcon}
+        iconClass={styles.product__icon}
+        iconHref={iconDelete}
       />
     </article>
   </li>

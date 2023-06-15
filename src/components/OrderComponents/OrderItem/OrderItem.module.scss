@@ -1,0 +1,32 @@
+.order {
+  display: flex;
+  width: 550px;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 10px;
+
+  &__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  &__btn {
+    width: 48px;
+    height: 48px;
+    border: none;
+    background: none;
+  }
+
+  &__icon {
+    width: 1rem;
+  }
+
+  &__title {
+    padding: 10px;
+
+    &__bottom {
+      font-size: 0.5rem;
+      color: grey;
+    }
+  }
+}
